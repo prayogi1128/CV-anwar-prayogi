@@ -1,0 +1,417 @@
+/* Reset dan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
+    color: white;
+    flex-wrap: wrap;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Container untuk gambar */
+.profile-image {
+    width: 150px;  /* Sesuaikan ukuran */
+    height: 150px; /* Pastikan tinggi sama dengan lebar (persegi) */
+    border-radius: 50%; /* Membuat lingkaran */
+    overflow: hidden; /* Menyembunyikan bagian gambar yang keluar */
+    border: 4px solid white; /* Bingkai putih */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan */
+    position: relative; /* Untuk positioning anak elemen */
+}
+
+/* Gambar itu sendiri */
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* PENTING: Memastikan gambar mengisi container tanpa terdistorsi */
+    object-position: center top; /* Fokus ke bagian atas gambar (wajah) */
+    transition: transform 0.3s ease; /* Animasi hover */
+}
+
+/* Efek hover */
+.profile-photo:hover {
+    transform: scale(1.05); /* Sedikit zoom saat hover */
+}
+
+.profile-image i {
+    font-size: 60px;
+    color: white;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.current-job {
+    margin-top: 10px;
+}
+
+.job-badge {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.print-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.print-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Main content */
+.main-content {
+    display: flex;
+    padding: 30px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.left-column {
+    flex: 2;
+    min-width: 300px;
+}
+
+.right-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Section umum */
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-title i {
+    color: #3498db;
+}
+
+/* Pengalaman */
+.experience-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.job-header {
+    margin-bottom: 15px;
+}
+
+.job-title {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.company-name {
+    font-size: 1.1rem;
+    color: #3498db;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.job-period {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.job-duties {
+    padding-left: 20px;
+}
+
+.job-duties li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.job-duties li::before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Pendidikan */
+.education-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.education-item:last-child {
+    border-bottom: none;
+}
+
+.school-name {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.education-period {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Kursus */
+.course-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #eee;
+}
+
+.course-item:last-child {
+    border-bottom: none;
+}
+
+.course-name {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.course-provider {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Keahlian */
+.skills-container {
+    margin-top: 10px;
+}
+
+.skill-item {
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.skill-bar {
+    height: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    border-radius: 5px;
+}
+
+/* Kontak */
+.contact-info {
+    margin-top: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+}
+
+.contact-item i {
+    color: #3498db;
+    width: 20px;
+}
+
+.placeholder-info {
+    color: #95a5a6;
+    font-style: italic;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    margin-top: 30px;
+}
+
+.footer p {
+    margin-bottom: 5px;
+}
+
+.footer-note {
+    font-size: 0.9rem;
+    color: #bdc3c7;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 0;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: modalFade 0.3s;
+}
+
+@keyframes modalFade {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-header h3 {
+    font-size: 1.3rem;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-body {
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.modal-body p {
+    margin-bottom: 15px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .profile-section {
+        width: 100%;
+    }
+    
+    .print-btn {
+        align-self: flex-end;
+    }
+    
+    .name {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .name {
+        font-size: 1.8rem;
+    }
+    
+    .main-content {
+        padding: 20px;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+}
